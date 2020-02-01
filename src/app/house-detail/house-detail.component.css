@@ -1,0 +1,261 @@
+.section-padding {
+  padding: 1%;
+}
+
+.toolbar-flex {
+  flex: 1 0.5 auto;
+}
+
+.example-card {
+  max-width: 1400px;
+}
+
+.button-container {
+  padding: 70px 50px;
+}
+
+.example-header-image {
+  background-size: cover;
+  width: 100px;
+  height: 100px;
+}
+
+.watermarked {
+  position: relative;
+}
+
+.watermarked::after {
+  content: "";
+  display: block;
+  background-size: contain;
+  width: 75%;
+  height: 100%;
+  position: absolute; 
+  background-position: 50px 20px;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+}
+
+.image-model {
+  width: 100%;
+  height: auto;
+}
+
+.info-display {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 1px;
+  padding: 1%;
+}
+
+div.grid-info
+{
+    display: flex;
+    margin-bottom: 10px;
+}
+
+div.grid-info > div
+{
+    flex: 1 1 5em;
+    margin-left: 10px;
+    height:auto;
+}
+
+.subheading-info {
+  margin-top: -6%;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .example-header-image {
+    background-size: cover;
+    width: 80px;
+    height: 80px;
+    margin-top: 5%
+  }
+
+  .title-name {
+    font-size: 30px;
+  }
+
+  .title-1 {
+    font-size: 22px;
+    display: none;
+  }
+  .title-2 {
+    font-size: 22px;
+    display: none;
+  }
+
+  .image-model {
+    width: 100%;
+    height: auto;
+  }
+
+  .card-information {
+    min-width: 350px;
+    max-width: 425px;
+  }
+
+  .detail-subheading-1 {
+    font-size: 18px;
+  }
+  .detail-body-1 {
+    font-size: 16px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .example-header-image {
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    margin-top: 0%;
+  }
+
+  .title-name {
+    font-size: 26px;
+  }
+
+  .title-1 {
+    font-size: 24px;
+  }
+  .title-2 {
+    font-size: 24px;
+  }
+
+  .title-phone {
+    font-size: 24px;
+  }
+
+  .image-model {
+    width: 80%;
+    height: auto;
+  }
+
+  .card-information {
+    min-width: 450px;
+    max-width: 600px;
+  }
+
+  .detail-subheading-1 {
+    font-size: 18px;
+  }
+  .detail-body-1 {
+    font-size: 16px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .example-header-image {
+    background-size: cover;
+    width: 150px;
+    height: 150px;
+  }
+
+  .title-name {
+    font-size: 28px;
+  }
+
+  .title-1 {
+    font-size: 24px;
+  }  .title-2 {
+    font-size: 24px;
+  }
+
+  .image-model {
+    width: 75%;
+    max-height: auto;
+  }
+
+  .card-information {
+    min-width: 600px;
+    max-width: 768px;
+  }
+
+  .detail-subheading-1 {
+    font-size: 20px;
+  }
+  .detail-body-1 {
+    font-size: 18px;
+  }
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .example-header-image {
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+  }
+
+  .title-name {
+    font-size: 30px;
+  }
+
+  .title-1 {
+    font-size: 26px;
+  }  
+  .title-2 {
+    font-size: 26px;
+  }
+
+  .image-model {
+    width: 70%;
+    height: auto;
+  }
+
+  .card-information {
+    min-width: 800px;
+    max-width: 992px;
+  }
+
+  .detail-subheading-1 {
+    font-size: 22px;
+  }
+  .detail-body-1 {
+    font-size: 20px;
+  }
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .example-header-image {
+    background-size: cover;
+    width: 200px;
+    height: 200px;
+  }
+
+  .title-name {
+    font-size: 32px;
+  }
+
+  .title-1 {
+    font-size: 26px;
+  }  
+  
+  .title-2 {
+    font-size: 26px;
+  }
+
+  .image-model {
+    width: 65%;
+    height: auto;
+  }
+
+  .card-information {
+    min-width: 1000px;
+    max-width: 1440px;
+  }
+
+  .detail-subheading-1 {
+    font-size: 24px;
+  }
+  .detail-body-1 {
+    font-size: 22px;
+  }
+
+}

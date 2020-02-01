@@ -1,0 +1,35 @@
+<div class="signin-div" fxLayoutAlign="center center">
+
+  <mat-card class="example-card" fxFlex="50" fxFlex.md="80" fxFlex.sm="90" fxFlex.xs="90" fxLayout="column">
+
+    <mat-card-header fxLayoutAlign="center center">
+      <span class="mat-subheading-1">HouRent</span>
+    </mat-card-header>
+
+    <mat-card-content>
+
+      <div class="form" fxLayoutAlign="center center">
+        <form class="example-form" fxLayout="column" fxFlex="70" fxFlex.md="80" fxFlex.sm="90" fxFlex.xs="90">
+          <div class="input-user">
+            <mat-form-field class="input-full-width">
+              <input id="name" name="name" type="text" matInput placeholder="Email" [(ngModel)]="user.name">
+            </mat-form-field>
+          </div>
+
+          <div class="input-pass">
+            <mat-form-field class="input-full-width">
+              <input id="password" name="password" type="text" matInput placeholder="Password" [(ngModel)]="user.password">
+            </mat-form-field>
+          </div>
+        </form>
+      </div>
+
+    </mat-card-content>
+
+    <mat-card-actions fxLayoutAlign="center center">
+      <button mat-raised-button color="primary" (click)="signIn()">Sign In</button>
+    </mat-card-actions>
+
+  </mat-card>
+
+</div>

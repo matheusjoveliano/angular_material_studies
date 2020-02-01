@@ -1,0 +1,161 @@
+.hero-container {
+  background: url(/assets/images/house.jpg) center center no-repeat;
+  background-size: cover;
+  height: calc(100vh - 115px);
+}
+
+.button-container {
+  padding: 35px 115px;
+}
+
+.button {
+  width: 170px;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 4px;
+}
+
+.header-container {
+  padding: 60px 20px;
+  text-align: center;
+  max-width: 600px;
+}
+
+.header-container .mat-display-4 {
+  color: white;
+  font-weight: 400;
+}
+
+.header-container .mat-display-1 {
+  margin: 10px;
+  color: white;
+  margin-top: 80px;
+  font-weight: 400;
+}
+
+.text-mid {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  transform: translate(-50%, 50%);
+}
+
+.text-mid h3 {
+  -webkit-text-fill-color: transparent;
+  font-stretch: normal;
+  font-size: 200px;
+  letter-spacing: 0.09em;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-family: Rajdhani, sans-serif;
+  top: 50%;
+  left: 50%;
+  position: relative;
+}
+
+.home-section {
+  text-align: center;
+  line-height: normal;
+  margin-top: 30px;
+}
+
+.subheading-description {
+  width: 90%;
+}
+
+.girls-display {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 15px;
+  padding: 2%;
+}
+
+.girls-display mat-card {
+  position: relative;
+  text-align: center;
+}
+
+.blonde-girl {
+  background: url(/assets/images/house_1.jpg) center center no-repeat;
+  background-size: cover;
+}
+
+.brunette-girl {
+  background: url(/assets/images/house_2.jpg) center center no-repeat;
+  background-size: cover;
+}
+
+.ginger-girl {
+  background: url(/assets/images/house_3.jpg) center center no-repeat;
+  background-size: cover;
+}
+
+.girls-display mat-card {
+  height: 400px;
+}
+
+.girls-display mat-card-header h2 {
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 43px;
+  text-align: center;
+}
+
+.girls-display mat-card-header {
+  position: absolute;
+  top:  10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  height: 55px;
+  background: rgba(117, 10, 63, 0.5);
+  color: white;
+}
+
+.girls-display mat-card-actions {
+  position: absolute;
+  top: 85%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+}
+
+.girls-display mat-card button {
+  min-width: 141px;
+  min-height: 40px;
+}
+
+/* @media all and (min-width: 768px) {
+  .hero-container {
+    height: 100vh;
+  }
+} */
+
+@media all and (max-width: 599px) {
+  .header-container .mat-display-1 {
+    font-size: 1.1rem;
+    line-height: 1.1;
+  }
+
+  .header-container .mat-display-4 {
+    font-size: 3rem;
+    line-height: 1.1;
+  }
+
+  .hero-container {
+    height: calc(100vh - 250px);
+  }
+}
+
+@media all and (max-width: 1288px) {
+  .text-mid, .text-mid h3 {
+    display: none;
+  }
+
+  /* .home-section {
+    padding-top: 80px;
+  } */
+  
+}

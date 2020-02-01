@@ -1,0 +1,114 @@
+<section class="section-padding" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center">
+
+  <mat-card class="example-card" fxFlex="90">
+    <mat-card-header>
+      <mat-card-title-group>
+        <mat-card-title>
+          <span class="mat-subheading-2 title-name">{{ house.name }}</span>
+        </mat-card-title>
+        <mat-card-subtitle>
+          <span class="mat-subheading-1"> {{ house.phone }}</span>
+          <br>
+          <span class="mat-subheading-1 title-1">
+            {{ house.type }},
+            {{ house.year }},
+            {{ house.city }} - {{ house.county }}
+          </span>
+        </mat-card-subtitle>
+      </mat-card-title-group>
+      <div mat-card-avatar class="example-header-image">
+        <img mat-card-avatar src="{{ house.photoProfile }}" alt="" class="example-header-image">
+      </div>
+      <div fxFlex></div>
+
+    </mat-card-header>
+
+    <div class="">
+      <nav mat-tab-nav-bar fxFlex fxLayout="row" fxLayoutAlign="center center">
+        <span class="toolbar-flex"></span>
+        <mat-tab-group mat-stretch-tabs>
+
+          <mat-tab label="Photos">
+
+            <div *ngFor="let p of house.photos" class="watermarked" fxFlex fxLayout="column"
+              fxLayoutAlign="center center" fxLayoutWrap fxLayoutGap="1%">
+              <br>
+              <img src="{{ p.photo }}" alt="" class="image-model">
+            </div>
+
+          </mat-tab>
+
+          <mat-tab label="Information">
+            <br>
+            <div class="grid-info" fxLayout="row" fxLayout.sm="column" fxLayout.xs="column">
+
+              <div>
+                <div>
+                  <h2 class="mat-subheading-1 detail-subheading-1">TYPE: <span class="mat-body-2 detail-body-1">{{
+                      house.type }}</span></h2>
+                </div>
+                <div>
+                  <h2 class="mat-subheading-1 detail-subheading-1">YEAR: <span class="mat-body-2 detail-body-1">{{
+                      house.year }}</span></h2>
+                </div>
+                <div>
+                  <h2 class="mat-subheading-1 detail-subheading-1">CITY: <span class="mat-body-2 detail-body-1">{{
+                      house.city }}</span></h2>
+                </div>
+                <div>
+                  <h2 class="mat-subheading-1 detail-subheading-1">COUNTY: <span class="mat-body-2 detail-body-1">{{
+                      house.county }}</span></h2>
+                </div>
+                <div>
+                  <h2 class="mat-subheading-1 detail-subheading-1">SIZE M²: <span class="mat-body-2 detail-body-1">{{
+                      house.size }}</span></h2>
+                </div>
+                <div>
+                  <h2 class="mat-subheading-1 detail-subheading-1">BEDROOM: <span class="mat-body-2 detail-body-1">{{
+                      house.bedroom }}</span></h2>
+                </div>
+                <div>
+                  <h2 class="mat-subheading-1 detail-subheading-1">BATHROOM: <span class="mat-body-2 detail-body-1">{{
+                      house.bathroom }}</span></h2>
+                </div>
+                <div>
+                  <h2 class="mat-subheading-1 detail-subheading-1">PARKING: <span class="mat-body-2 detail-body-1">{{
+                      house.parking }}</span></h2>
+                </div>
+                <div>
+                  <h2 class="mat-subheading-1 detail-subheading-1">PRICE: <span class="mat-body-2 detail-body-1">{{
+                      house.price }}</span></h2>
+                </div>
+                <br>
+              </div>
+
+              <div>
+                <div class="subheading-info">
+
+                  <p class="mat-body-1 detail-subheading-1">01. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Praesent non maximus risus. Donec metus turpis, volutpat sed interdum eget, sollicitudin a tellus.
+                    Duis venenatis id sem sed scelerisque. Morbi placerat lobortis lorem eu hendrerit. Nulla placerat
+                    efficitur diam, eu euismod nisi auctor a. Nullam consectetur, risus et vestibulum sagittis, eros
+                    dolor imperdiet lorem, vel egestas lacus justo sit amet massa. In eget blandit erat. Donec hendrerit
+                    justo nec diam elementum, sit amet consectetur ante hendrerit. Mauris nec hendrerit odio, a
+                    hendrerit libero. Cras non dolor leo.?</p>
+                  <p class="mat-body-2 detail-body-1">Nulla ut accumsan erat. Vivamus vulputate enim mauris, vulputate
+                    aliquet augue efficitur ut. Cras maximus posuere arcu ac iaculis. Nunc et leo mattis, lacinia leo a,
+                    laoreet ante. Vivamus id rutrum ligula. Ut nec arcu quis enim maximus rhoncus. Nunc rhoncus
+                    vulputate sagittis. Phasellus tellus nulla, posuere eget nunc eu, elementum tristique felis.
+                    Vestibulum luctus metus id mi blandit dignissim. Quisque ac diam metus.</p>
+
+                </div>
+              </div>
+            </div>
+
+          </mat-tab>
+
+        </mat-tab-group>
+        <span class="toolbar-flex"></span>
+      </nav>
+    </div>
+
+  </mat-card>
+
+</section>

@@ -1,0 +1,30 @@
+<div class="navtabs-container">
+
+  <nav mat-tab-nav-bar fxFlex fxLayout="row" fxLayoutAlign="center center" *ngIf="!showHeader">
+    <a mat-tab-link routerLink="/home" routerLinkActive #home="routerLinkActive" [active]="home.isActive" class="tab-link">
+      Home
+    </a>
+    <a mat-tab-link routerLink="/house" routerLinkActive #house="routerLinkActive" [active]="house.isActive"
+      class="tab-link">
+      Houses
+    </a>
+    <a mat-tab-link routerLink="/about" routerLinkActive #about="routerLinkActive" [active]="about.isActive" class="tab-link">
+      About
+    </a>
+  </nav>
+
+  <nav mat-tab-nav-bar fxFlex fxLayout="row" fxLayoutAlign="center center" *ngIf="showHeader">
+    <a mat-tab-link routerLink="/dashboard" routerLinkActive #dash="routerLinkActive" [active]="dash.isActive" class="tab-link">
+      Dashboard
+    </a>
+    <a mat-tab-link routerLink="/profile" routerLinkActive #profile="routerLinkActive" [active]="profile.isActive"
+      class="tab-link">
+      Profile
+    </a>
+    <a mat-tab-link routerLink="/signin" routerLinkActive #exit="routerLinkActive" [active]="exit.isActive"
+      class="tab-link">
+      Sair
+    </a>
+  </nav>
+
+</div>

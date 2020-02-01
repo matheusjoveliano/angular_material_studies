@@ -1,0 +1,11 @@
+<mat-nav-list>
+  <a *ngIf="showHeader" mat-list-item routerLink="/dashboard" (click)="onToggleClose()">
+    <span class="mat-subheading-1">Dashboard</span>
+  </a>
+  <a *ngIf="showHeader" mat-list-item routerLink="/profile" (click)="onToggleClose()">
+    <span class="mat-subheading-1">Perfil</span>
+  </a>
+  <a mat-list-item routerLink="/signin" (click)="onToggleClose()">
+    <span class="mat-body-1">Sair</span>
+  </a>
+</mat-nav-list>

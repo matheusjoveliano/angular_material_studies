@@ -1,0 +1,155 @@
+<section class="section-padding" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center">
+
+  <mat-card class="" fxFlex="90">
+
+    <div class="accordion-section">
+      <mat-accordion class="search-headers-align">
+        <mat-expansion-panel [expanded]="expansion" (opened)="setStep(true)">
+          <mat-expansion-panel-header>
+            <mat-panel-title fxLayoutAlign="start center">
+              <mat-icon>search</mat-icon>&nbsp;
+              Search
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+
+          <div class="form-search-container" fxLayout.xs="column" fxLayout="row" fxLayoutWrap fxLayoutGap="1%"
+            fxLayoutAlign="center center">
+            <mat-form-field fxFlex="25" fxFlex.sm="80" fxFlex.md="40">
+              <mat-select placeholder="City">
+                <mat-option *ngFor="let food of houseCity" [value]="food.value">
+                  {{food.viewValue}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+            <mat-form-field fxFlex="25" fxFlex.sm="80">
+              <mat-select placeholder="Type">
+                <mat-option *ngFor="let foo of houseType" [value]="foo.value">
+                  {{foo.viewValue}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+            <mat-form-field fxFlex="25" fxFlex.sm="80">
+              <mat-select placeholder="Size m²">
+                <mat-option *ngFor="let food of houseSize" [value]="food.value">
+                  {{food.viewValue}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+            <mat-form-field fxFlex="25" fxFlex.sm="80">
+              <mat-select placeholder="Price">
+                <mat-option *ngFor="let food of housePrice" [value]="food.value">
+                  {{food.viewValue}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+
+          <mat-action-row>
+            <button mat-raised-button color="primary" (click)="search()">Search</button>
+          </mat-action-row>
+
+        </mat-expansion-panel>
+      </mat-accordion>
+    </div>
+
+
+    <div class="girls-display" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="center">
+      <mat-card-header fxFlex="100" fxLayout="column" fxLayout="row" fxLayoutAlign="center center">
+        <h2>New</h2>
+      </mat-card-header>
+      <mat-card *ngFor="let item of houseNews" class="blonde-girl watermarked" fxFlex="19" fxFlex.md="30"
+        fxFlex.sm="100" (click)="goToDetail(item)">
+        <img class="news-girl" mat-card-image src="{{ item.photoProfile }}" alt="">
+        <mat-card-actions fxLayout="column" fxLayout="row" fxLayoutAlign="center center">
+          <button mat-raised-button color="primary">
+            {{ item.name }} - {{ item.city }}
+          </button>
+        </mat-card-actions>
+      </mat-card>
+
+    </div>
+
+    <div class="girls-display-week" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="center">
+      <mat-card-header fxFlex="100" fxLayout="column" fxLayout="row" fxLayoutAlign="center center">
+        <h2>Best Price</h2>
+      </mat-card-header>
+      <mat-card *ngFor="let item of houseWeek" class="brunette-girl watermarked" fxFlex="47" fxFlex.sm="100"
+        (click)="goToDetail(item)">
+        <img class="week-girl" mat-card-image src="{{ item.photoProfile }}" alt="">
+        <mat-card-actions fxLayout="column" fxLayout="row" fxLayoutAlign="center center">
+          <button mat-raised-button color="primary">
+            {{ item.name }} - {{ item.city }}
+          </button>
+        </mat-card-actions>
+      </mat-card>
+
+    </div>
+
+    <div class="girls-display" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="center">
+      <mat-card-header fxFlex="100" fxLayout="column" fxLayout="row" fxLayoutAlign="center center">
+        <h2>Section HouRent</h2>
+      </mat-card-header>
+      <mat-card *ngFor="let item of houseSelection" class="brunette-girl watermarked" fxFlex="19" fxFlex.md="30"
+        fxFlex.sm="100" (click)="goToDetail(item)">
+        <img class="selection-girl" mat-card-image src="{{ item.photoProfile }}" alt="">
+        <mat-card-actions fxLayout="column" fxLayout="row" fxLayoutAlign="center center">
+          <button mat-raised-button color="primary">
+            {{ item.name }} - {{ item.city }}
+          </button>
+        </mat-card-actions>
+      </mat-card>
+
+    </div>
+
+  </mat-card>
+
+</section>
+
+<!-- <section class="section-padding" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center">
+
+  <mat-card class="" fxFlex="90">
+
+    <mat-card-header fxLayout="column" fxLayout="row" fxLayoutAlign="center center">
+      <h2>ACOMPANHANTES DA SEMANA</h2>
+    </mat-card-header>
+
+    <div class="girls-display-week" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="2%" fxLayoutAlign="center">
+
+      <mat-card *ngFor="let item of houseWeek" class="brunette-girl" fxFlex="40" fxFlex.sm="80" (click)="goToDetail(item)">
+        <img class="week-girl" mat-card-image src="{{ item.photoProfile }}" alt="">
+        <mat-card-actions fxLayout="column" fxLayout="row" fxLayoutAlign="center center">
+          <button mat-raised-button color="primary">
+            {{ item.name }} - {{ item.city }}
+          </button>
+        </mat-card-actions>
+      </mat-card>
+
+    </div>
+  </mat-card>
+
+</section>
+
+<section class="section-padding" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center">
+
+  <mat-card class="" fxFlex="90">
+
+    <mat-card-header fxLayout="column" fxLayout="row" fxLayoutAlign="center center">
+      <h2>Section HouRent</h2>
+    </mat-card-header>
+
+    <div class="girls-display" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="1%" fxLayoutAlign="center">
+
+      <mat-card *ngFor="let item of houseSelection" class="brunette-girl" fxFlex="15" fxFlex.md="30" fxFlex.sm="80"
+        (click)="goToDetail(item)">
+        <img class="selection-girl" mat-card-image src="{{ item.photoProfile }}" alt="">
+        <mat-card-actions fxLayout="column" fxLayout="row" fxLayoutAlign="center center">
+          <button mat-raised-button color="primary">
+            {{ item.name }} - {{ item.city }}
+          </button>
+        </mat-card-actions>
+      </mat-card>
+
+    </div>
+  </mat-card>
+
+</section> -->

@@ -1,0 +1,12 @@
+.signin-div {
+  margin-top: 7%;
+}
+
+mat-card button, .mat-subheading-1 {
+  min-width: 141px;
+  min-height: 40px;
+}
+
+.input-full-width {
+  width: 100%;
+}

@@ -1,0 +1,126 @@
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+$x-primary: (
+  50 : #f1e2ea,
+  100 : #dbb7ca,
+  200 : #c487a7,
+  300 : #ac5684,
+  400 : #9a3269,
+  500 : #880e4f,
+  600 : #800c48,
+  700 : #750a3f,
+  800 : #6b0836,
+  900 : #580426,
+  A100 : #ff8ab1,
+  A200 : #ff578f,
+  A400 : #ff246d,
+  A700 : #ff0a5c,
+  contrast: (
+      50 : #000000,
+      100 : #000000,
+      200 : #000000,
+      300 : #ffffff,
+      400 : #ffffff,
+      500 : #ffffff,
+      600 : #ffffff,
+      700 : #ffffff,
+      800 : #ffffff,
+      900 : #ffffff,
+      A100 : #000000,
+      A200 : #000000,
+      A400 : #ffffff,
+      A700 : #ffffff,
+  )
+);
+
+$x-accent: (
+  50 : #fefefe,
+  100 : #fcfcfc,
+  200 : #fafafa,
+  300 : #f8f8f8,
+  400 : #f7f7f7,
+  500 : #f5f5f5,
+  600 : #f4f4f4,
+  700 : #f2f2f2,
+  800 : #f0f0f0,
+  900 : #eeeeee,
+  A100 : #ffffff,
+  A200 : #ffffff,
+  A400 : #ffffff,
+  A700 : #ffffff,
+  contrast: (
+      50 : #000000,
+      100 : #000000,
+      200 : #000000,
+      300 : #000000,
+      400 : #000000,
+      500 : #000000,
+      600 : #000000,
+      700 : #000000,
+      800 : #000000,
+      900 : #000000,
+      A100 : #000000,
+      A200 : #000000,
+      A400 : #000000,
+      A700 : #000000,
+  )
+);
+
+$hourent-primary: mat-palette($x-primary, 700, 300, 900);
+$hourent-accent:  mat-palette($x-accent, 500, 400, 700);
+
+$hourent-warn:    mat-palette($mat-red);
+
+$hourent-theme: mat-light-theme($hourent-primary, $hourent-accent, $hourent-warn);
+
+@import './app/navigation/navtabs/navtabs.component-theme.scss';
+
+@include angular-material-theme($hourent-theme);
+@include navtabs-component-theme($hourent-theme);
+
+// $font-family:   'Petit Formal Script, cursive',
+$hourent-typography: mat-typography-config(
+  $font-family:   'Rajdhani, sans-serif',
+  $display-4:     mat-typography-level(112px, 112px, 300),
+  $display-3:     mat-typography-level(56px, 56px, 400),
+  $display-2:     mat-typography-level(45px, 48px, 400),
+  $display-1:     mat-typography-level(34px, 40px, 400),
+  $headline:      mat-typography-level(97px, 32px, 400),
+  $title:         mat-typography-level(61px, normal, 500),
+  $subheading-2:  mat-typography-level(48px, normal, 400),
+  $subheading-1:  mat-typography-level(30px, normal, 400),
+  $body-2:        mat-typography-level(14px, normal, 500),
+  $body-1:        mat-typography-level(18px, normal, 400),
+  $caption:       mat-typography-level(12px, normal, 400),
+  $button:        mat-typography-level(14px, normal, 500),
+  // Line-height must be unit-less fraction of the font-size.
+  $input:         mat-typography-level(inherit, 1.125, 400)
+);
+
+
+@include mat-base-typography($hourent-typography);
+
+@include mat-checkbox-typography($hourent-typography);
+
+@include angular-material-typography($hourent-typography);
+
+@include mat-core($hourent-typography);
+
+.mat-list-option:hover, .mat-list-option:focus, .mat-nav-list .mat-list-item:hover, .mat-nav-list .mat-list-item:focus {
+  background-color: mat-color($hourent-primary, 300);
+  color: mat-color($hourent-primary, 900);
+}
+
+.mat-tab-link {
+  font-size: 18px;
+}
+
+.mat-tab-label-content {
+  font-size: 18px;
+}
+
+.mat-tab-header-pagination, .mat-tab-header-pagination-disabled {
+  display: none !important;
+}
