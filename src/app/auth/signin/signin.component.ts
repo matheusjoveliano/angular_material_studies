@@ -9,7 +9,7 @@ import { User } from '../../models/user';
 })
 export class SigninComponent implements OnInit {
 
-  public user: User = { name: '', password: '' };
+  public user: User = { name: 'email@email.com', password: '123456' };
 
   constructor(
     private _authService: AuthService

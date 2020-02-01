@@ -1,3 +1,35 @@
+# HouRent Material Angular Studies
+
+The following sections summarize the technologies used and decisions made for implementation.
+
+## Front-End
+- [angularmaterial](https://material.angularjs.org/)
+- AngularJS
+- JavaScript
+
+# Project Execution
+
+- Install [NodeJS](https://nodejs.org/en/) - [NPM](https://www.npmjs.com/);
+- Clone the repository;
+- Enter via terminal in the project's root folder;
+- Run the project **npm start**;
+```shell
+  npm start
+```
+- In case you need angular-devkit;
+```
+  npm i --save-dev @angular-devkit/build-angular
+```
+
+The HTTP server is previously configured to use port 4000. If you need to change this port, just change the file:
+**package.json**;
+
+# Contact
+
+matheus.joveliano@gmail.com;
+
+__________
+
 # HouRent
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.3.
