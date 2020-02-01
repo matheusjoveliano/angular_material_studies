@@ -21,9 +21,6 @@ The following sections summarize the technologies used and decisions made for im
   npm i --save-dev @angular-devkit/build-angular
 ```
 
-The HTTP server is previously configured to use port 4000. If you need to change this port, just change the file:
-**package.json**;
-
 # Contact
 
 matheus.joveliano@gmail.com;
